@@ -1,0 +1,16 @@
+pipeline{
+    agent { 
+        label 'kubernetes'
+  }
+    stages{
+        stage('Destroy Arsenal Web Server Today'){
+            steps{
+                withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                    sh "echo 'Destroy Mongo DB'"
+                    sh "terraform init"
+                    sh "terraform destroy --auto-approve" 
+            }
+            }
+        }
+    }
+}
