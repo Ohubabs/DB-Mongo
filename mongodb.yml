@@ -152,7 +152,7 @@ image:
 schedulerName: ""
 ## @param architecture MongoDB(&reg;) architecture (`standalone` or `replicaset`)
 ##
-architecture: standalone
+architecture: replicaset #standalone
 ## @param useStatefulSet Set to true to use a StatefulSet instead of a Deployment (only when `architecture=standalone`)
 ##
 useStatefulSet: false
