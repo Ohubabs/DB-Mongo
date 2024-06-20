@@ -19,11 +19,19 @@ terraform {
 
 provider "aws" {
     region = "us-west-2"
-    #access_key = "my-access-key"
-    #secret_key = "my-secret-key"
 }
 
+provider "kubernetes" { ##for DB Cluster
+    config_path = "/home/terra/.kube/config"
+  }
+
 provider "helm" {
+  kubernetes {
+    config_path = "/home/terra/.kube/config"
+  }
+}
+
+/*provider "helm" { #for DBZ Cluster
   kubernetes {
     config_path = "/home/eks/.kube/config"
   }
@@ -31,4 +39,5 @@ provider "helm" {
 
 provider "kubernetes" {
     config_path = "/home/eks/.kube/config"
-  }
+  }*/
+
