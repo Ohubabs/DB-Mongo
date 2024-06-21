@@ -3,7 +3,7 @@ pipeline{
         label 'kubernetes'
   }
     stages{
-        stage('Destroy Arsenal Web Server Today'){
+        stage('Destroy MongoDB Database'){
             steps{
                 withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                     sh "echo 'Destroy Mongo DB'"
