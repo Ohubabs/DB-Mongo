@@ -1,7 +1,7 @@
 resource "helm_release" "mongodb" {
   name       = "mongodb"
   #create_namespace = true
-  namespace  = "konoha"
+  namespace  = "springapp" #make sure that a namespace is created before deployment otherwise there'll be an error in downloading the chart.
   repository = "oci://registry-1.docker.io/bitnamicharts"
   chart      = "mongodb"
   values = [
