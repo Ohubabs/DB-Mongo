@@ -14,8 +14,10 @@ resource "kubernetes_storage_class" "mongo-sc" {
     name = "mongo-sc"
   }
   storage_provisioner = "ebs.csi.aws.com"
-  volume_binding_mode = "Immediate"
+  volume_binding_mode = "WaitForFirstConsumer" #Immediate
   parameters = {
-    type = "gp2"
+    type = "gp3"
+    iops = 3000
+    encrypted = "true"
   }
 }
