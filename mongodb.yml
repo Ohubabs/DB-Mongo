@@ -1558,8 +1558,8 @@ arbiter:
   ## @param arbiter.nodeSelector Arbiter Node labels for pod assignment
   ## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
   ##
-  nodeSelector:
-    app: mongo
+  nodeSelector: {}
+    #app: mongo
   ## @param arbiter.tolerations Arbiter Tolerations for pod assignment
   ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
   ##
