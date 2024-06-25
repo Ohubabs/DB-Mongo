@@ -10,7 +10,7 @@ pipeline{
                 /git 'https://github.com/Ohubabs/DB-Mongo.git'
             //}
         //}
-        stage('Setup Mongo DataBase'){
+        stage('Setup MongoDB DataBase'){
             steps{
               withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {  
                 sh "echo 'Deploy Mongo Database for DragonBall Java Springapp'"
