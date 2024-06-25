@@ -165,7 +165,7 @@ auth:
   enabled: true
   ## @param auth.rootUser MongoDB(&reg;) root user
   ##
-  rootUser: devdb
+  rootUser: krillin
   ## @param auth.rootPassword MongoDB(&reg;) root password
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mongodb#setting-the-root-user-and-password-on-first-run
   ##
