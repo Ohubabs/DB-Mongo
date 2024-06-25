@@ -1,6 +1,6 @@
-resource "kubernetes_secret_v1" "krillin" {
+resource "kubernetes_secret_v1" "mongodb-auth" {
   metadata {
-    name = "krillin"
+    name = "mongodb-auth"
     namespace = "springapp" #same namespace as springapp mongo app deployment
   }
 
