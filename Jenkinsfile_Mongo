@@ -7,7 +7,7 @@ pipeline{
             //steps{
                 //sh "echo cloning code"
                 //sh "echo clone code complete"
-                /git 'https://github.com/Ohubabs/DB-Mongo.git'
+                //git 'https://github.com/Ohubabs/DB-Mongo.git'
             //}
         //}
         stage('Setup MongoDB DataBase'){
