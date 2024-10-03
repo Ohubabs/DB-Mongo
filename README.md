@@ -14,6 +14,10 @@ For this project, you are to setup a pipeline to deploy Mongo Database into DB c
 
 ### Step 2: Go to “Configuration”, Select “Poll SCM” and Enter the details for your GitHub repo & Jenkinsfile or copy and paste the Jenkinsfile in this repo.
 
+![image](https://github.com/user-attachments/assets/89491f9f-2d6b-414d-a4ca-d58fe01c1ab7)
+
+
+
 ![Screenshot 2024-06-24 at 2 58 37 PM](https://github.com/user-attachments/assets/69597ad5-4a4d-4c23-b8c4-ec7deb123cf2)
 
 ### Step 3: Edit the mongodb.yml file with your mongodb credentials, storageclass to provision persistent storage for the database. and metrics enabled to be tracked by Prometheus.
