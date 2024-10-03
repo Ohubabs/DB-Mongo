@@ -16,7 +16,7 @@ For this project, you are to setup a pipeline to deploy Mongo Database into DB c
 
 ![Screenshot 2024-06-24 at 2 58 37 PM](https://github.com/user-attachments/assets/69597ad5-4a4d-4c23-b8c4-ec7deb123cf2)
 
-### Step 3: Edit the mongodb.yml file with your mongodb credentials and storageclass to provision persistent storage for the database.
+### Step 3: Edit the mongodb.yml file with your mongodb credentials, storageclass to provision persistent storage for the database. and metrics enabled to be tracked by Prometheus.
 
 ![Screenshot 2024-06-24 at 6 10 35 PM](https://github.com/user-attachments/assets/250ecdcc-0e5d-421c-819c-f7c8fffea4d0)
 
