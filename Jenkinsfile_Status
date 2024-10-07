@@ -7,32 +7,24 @@ pipeline{
             //steps{
                 //sh "echo cloning code"
                 //sh "echo clone code complete"
-                //git 'https://github.com/Konoha-23/Konoha_WP.git'
+                //git 'https://github.com/Ohubabs/DB-Mongo.git'
             //}
         //}
-        stage('Get Pods in Konoha namespace'){
+        stage('Get Pods in Springapp namespace'){
             steps{
               withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                sh "echo 'Get Pods in Konoha namespace'"
-                sh "kubectl get po -n konoha"
+                sh "echo 'Get Pods in springapp namespace'"
+                sh "kubectl get po -n springapp"
                 }
             }
         }
-        stage('Get Services in Konoha Namespace'){
+        stage('Get Services in Springapp Namespace'){
             steps{
               withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                sh "echo 'Get Services in Konoha Namespace'"
-                sh "kubectl get svc -n konoha"
+                sh "echo 'Get Services in springapp Namespace'"
+                sh "kubectl get svc -n springapp"
                 }
             }
-        }  
-        //stage('Check Logs'){
-        //    steps{
-        //      withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-        //        sh "echo 'Check Logs'"
-        //        sh "kubectl logs wordpress-849fc57f7f-xnf9q -n wp"
-        //        }
-        //    }
-        //}
+        } 
     }
 } 
